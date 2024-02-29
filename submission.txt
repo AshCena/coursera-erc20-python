@@ -1,0 +1,5 @@
+contract_address="0xb1ac9e086381e22adb6b36a211c3517f18cac200"
+decentralized_id="0x1df4e224e016db06e25d27120c0bd333617e6fc3"
+beneficiary_address="0x6aa85b820ea3fa061ca5831dcd47de7bc888324c"
+token_name="ABCoin"
+token_symbol="ABC"

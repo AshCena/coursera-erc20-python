@@ -1,4 +1,6 @@
-FROM python:3.9-alpine
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
+
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
@@ -12,11 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Set environment variable
-ENV USER_FILE_PATH=/shared/submission/submission.txt
-ENV OUTPUT_PATH=/shared/feedback.json
-# For testing purpose
-# ENV USER_FILE_PATH=/usr/src/app/submission.txt
-# ENV OUTPUT_PATH=/usr/src/app/feedback.json
+ENV USER_FILE_PATH=/usr/src/app/submission.txt
+ENV OUTPUT_PATH=/usr/src/app/feedback.json
 
 # Command to run on container start
 CMD [ "python", "src/main.py" ]
